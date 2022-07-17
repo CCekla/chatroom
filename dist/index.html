@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Family Chatroom</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-rose-100">
+
+    <!--title-->
+    <header class="my-8">
+        <h1 class="text-center font-extrabold text-5xl text-slate-800">Family Chatroom</h1>
+    </header>
+
+    <!--container-->
+    <main class="container mx-auto max-w-2xl">
+        <p class="text-center mb-4 text-slate-700">Choose a chatroom</p>
+        <div class="chatrooms text-center">
+            <button
+                class="btn px-[24px] py-[12px] bg-teal-500 rounded text-white font-semibold transition hover:bg-teal-600 focus:outline-none"
+                id="general">#general</button>
+            <button
+                class="btn px-[24px] py-[12px] ml-2 bg-teal-500 rounded text-white font-semibold transition hover:bg-teal-600 focus:outline-none"
+                id="chores">#chores</button>
+            <button
+                class="btn px-[24px] py-[12px] ml-2 bg-teal-500 rounded text-white font-semibold transition hover:bg-teal-600 focus:outline-none"
+                id="shopping">#shopping</button>
+            <button
+                class="btn px-[24px] py-[12px] ml-2 bg-teal-500 rounded text-white font-semibold transition hover:bg-teal-600 focus:outline-none"
+                id="events">#events</button>
+        </div>
+
+        <!--room title-->
+        <h2 class="text-center capitalize font-extrabold text-3xl text-slate-800 my-4 room-name">general</h2>
+
+        <!--messages-->
+        <div class="chat-msgs">
+            <ul class="list-none w-full"></ul>
+        </div>
+
+        <!--send message form-->
+        <form class="my-6 new-msg">
+            <label for="message" class="block mb-2 text-sm font-normal text-slate-700">Your message:</label>
+            <div class="flex items-center">
+                <input type="text" id="message"
+                    class="w-full rounded-l bg-slate-50 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    placeholder="Write something" required />
+                <button type="submit"
+                    class="btn px-4 py-2 bg-teal-500 rounded-r text-white transition hover:bg-teal-600 focus:outline-none"
+                    value="send">Send</button>
+            </div>
+        </form>
+
+        <!--change name-->
+        <form class="mb-6 new-name">
+            <label for="name" class="block mb-2 text-sm font-normal text-slate-700">Update your name:</label>
+            <div class="flex items-center">
+                <input type="text" id="name"
+                    class="w-full rounded-l bg-slate-50 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    placeholder="New name" required />
+                <button type="submit"
+                    class="btn px-4 py-2 bg-teal-500 rounded-r text-white transition hover:bg-teal-600 focus:outline-none"
+                    value="update">Update</button>
+            </div>
+        </form>
+
+        <!--change color-->
+        <div class="flex">
+            <div class="w-screen md:w-1/2">
+                <button data-dropdown-toggle="colors"
+                    class="btn-drop inline-flex items-center px-4 py-2 bg-teal-500 rounded text-white transition hover:bg-teal-600 focus:outline-none"
+                    type="button">Colors <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <div id="colors"
+                    class="hidden z-10 flex justify-center bg-white divide-y divide-gray-100 rounded shadow w-44 mt-2 py-2">
+                    <div class="columns-3">
+                        <div class="form-check">
+                            <input
+                                class="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-fuchsia-500 checked:bg-fuchsia-500 checked:border-gray-600 checked:border-2 focus:outline-none transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain cursor-pointer"
+                                type="checkbox" value="" id="#D946EF">
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-indigo-500 checked:bg-indigo-500 checked:border-gray-600 checked:border-2 focus:outline-none transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain cursor-pointer"
+                                type="checkbox" value="" id="#6366F1">
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-sky-500 checked:bg-sky-500 checked:border-gray-600 checked:border-2 focus:outline-none transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain cursor-pointer"
+                                type="checkbox" value="" id="#0EA5E9">
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-emerald-500 checked:bg-emerald-500 checked:border-gray-600 checked:border-2 focus:outline-none transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain cursor-pointer"
+                                type="checkbox" value="" id="#10B981">
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-amber-500 checked:bg-amber-500 checked:border-gray-600 checked:border-2 focus:outline-none transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain cursor-pointer"
+                                type="checkbox" value="" id="#F59E0B">
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-rose-500 checked:bg-rose-500 checked:border-gray-600 checked:border-2 focus:outline-none transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain cursor-pointer"
+                                type="checkbox" value="" id="#F43F5E">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--change avatar-->
+            <div class="w-screen md:w-1/2">
+                <button data-dropdown-toggle="avatars"
+                    class="btn-drop inline-flex items-center px-4 py-2 bg-teal-500 rounded text-white transition hover:bg-teal-600 focus:outline-none"
+                    type="button">Avatars <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <div id="avatars"
+                    class="hidden z-10 flex justify-center bg-white divide-y divide-gray-100 rounded shadow mt-2 py-2">
+                    <div class="columns-3">
+                        <div class="form-check py-2">
+                            <input type="checkbox" class="hidden peer" id="bear" />
+                            <label for="bear" class="form-check-input cursor-pointer border-2 border-gray-300 peer-checked:border-gray-600 peer-checked:border-2 block rounded-full"><img id="bear.png" class="w-16" src="../src/img/avatars/bear.png" /></label>
+                        </div>
+                        <div class="form-check py-2">
+                            <input type="checkbox" class="hidden peer" id="cat" />
+                            <label for="cat" class="form-check-input cursor-pointer border-2 border-gray-300 peer-checked:border-gray-600 peer-checked:border-2 block rounded-full"><img id="cat.png" class="w-16" src="../src/img/avatars/cat.png" /></label>
+                        </div>
+                        <div class="form-check py-2">
+                            <input type="checkbox" class="hidden peer" id="dog" />
+                            <label for="dog" class="form-check-input cursor-pointer border-2 border-gray-300 peer-checked:border-gray-600 peer-checked:border-2 block rounded-full"><img id="dog.png" class="w-16" src="../src/img/avatars/dog.png" /></label>
+                        </div>
+                        <div class="form-check py-2">
+                            <input type="checkbox" class="hidden peer" id="panda" />
+                            <label for="panda" class="form-check-input cursor-pointer border-2 border-gray-300 peer-checked:border-gray-600 peer-checked:border-2 block rounded-full"><img id="panda.png" class="w-16" src="../src/img/avatars/panda.png" /></label>
+                        </div>
+                        <div class="form-check py-2">
+                            <input type="checkbox" class="hidden peer" id="penguin" />
+                            <label for="penguin" class="form-check-input cursor-pointer border-2 border-gray-300 peer-checked:border-gray-600 peer-checked:border-2 block rounded-full"><img id="penguin.png" class="w-16" src="../src/img/avatars/penguin.png" /></label>
+                        </div>
+                        <div class="form-check py-2">
+                            <input type="checkbox" class="hidden peer" id="sloth" />
+                            <label for="sloth" class="form-check-input cursor-pointer border-2 border-gray-300 peer-checked:border-gray-600 peer-checked:border-2 block rounded-full"><img id="sloth.png" class="w-16" src="../src/img/avatars/sloth.png" /></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="update-msg text-sm text-slate-500 text-center mt-2"></div>
+    </main>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>

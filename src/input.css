@@ -1,0 +1,40 @@
+/* ./src/tailwind.css */
+@tailwind base;
+@tailwind components;
+
+.chat-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+.chat-card * {
+    margin-left: .5rem;
+}
+
+.chat-card img {
+    flex: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-card div {
+    flex: 1 1 auto;
+}
+
+.chat-card div span {
+    color: #1E293B;
+}
+
+.chat-card div small {
+    color: #64748B;
+}
+
+@tailwind utilities;
+
+/* npx tailwindcss -i src/input.css -o dist/styles.css --watch */
