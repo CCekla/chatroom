@@ -1,3 +1,4 @@
 src/index.js
 .DS_Store
 node_modules
+dist/bundle.js
